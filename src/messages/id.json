@@ -1,0 +1,141 @@
+{
+  "applicationInternal": [
+    {
+      "name": "Kasus Prioritas",
+      "path": "/kasus-prioritas",
+      "image": "/images/information/kasus-prioritas.png"
+    },
+    {
+      "name": "Mekanisme Permintaan Permohonan",
+      "path": "/mekanisme-permohonan",
+      "image": "/images/information/mekanisme-permohonan.png"
+    },
+    {
+      "name": "Program Perlindungan",
+      "path": "/program-perlindungan",
+      "image": "/images/information/program-perlindungan.png"
+    },
+    {
+      "name": "Subjek Perlindungan",
+      "path": "/subjek-perlindungan",
+      "image": "/images/information/subjek-perlindungan.png"
+    }
+  ],
+  "accessbillity": {
+    "title": "Aksesibilitas",
+    "reset": "Reset",
+    "saturate": "Saturasi",
+    "contrast": "Kontras",
+    "brightness": "Kecerahan",
+    "grayscale": "Abu - abu",
+    "invert": "Kebalikan",
+    "sepia": "Sepia",
+    "fontSize": "Ukuran Huruf",
+    "theme": "Tema",
+    "highlightLink": "Sorot Tautan"
+  },
+  "navigation": [
+    {
+      "name": "Beranda",
+      "path": "/"
+    },
+    {
+      "name": "Profil",
+      "path": "/profile",
+      "children": [
+        {
+          "name": "Profil Lembaga",
+          "path": "/profil/lembaga"
+        },
+        {
+          "name": "Pejabat",
+          "path": "/profil/pejabat"
+        },
+        {
+          "name": "Struktur Organisasi",
+          "path": "/profil/struktur"
+        },
+        {
+          "name": "Unit Kerja",
+          "path": "/profil/unit-kerja"
+        },
+        {
+          "name": "Roadmap dan Rencana Strategi",
+          "path": "/profil/roadmap"
+        },
+        {
+          "name": "Tindak Pidana Prioritas",
+          "path": "/profil/prioritas"
+        },
+        {
+          "name": "Ketentuan Logo",
+          "path": "/profil/logo"
+        }
+      ]
+    },
+    {
+      "name": "Perwakilan",
+      "path": "/delegation"
+    },
+    {
+      "name": "Layanan",
+      "path": "/service"
+    },
+    {
+      "name": "PPID",
+      "path": "/ppid"
+    },
+    {
+      "name": "Informasi Publik",
+      "path": "/public-information"
+    },
+    {
+      "name": "Berita",
+      "path": "/berita",
+      "children": [
+        {
+          "name": "Rilis",
+          "path": "/berita/rilis"
+        },
+        {
+          "name": "Artikel",
+          "path": "/berita/artikel"
+        },
+        {
+          "name": "Foto",
+          "path": "/berita/foto"
+        },
+        {
+          "name": "Video",
+          "path": "/berita/video"
+        }
+      ]
+    },
+    {
+      "name": "Publikasi",
+      "path": "/publikasi",
+      "children": [
+        {
+          "name": "Buku",
+          "path": "/publikasi/buku"
+        },
+        {
+          "name": "Buletin",
+          "path": "/publikasi/buletin"
+        },
+        {
+          "name": "Jurnal",
+          "path": "/publikasi/jurnal"
+        },
+        {
+          "name": "Policy Papper",
+          "path": "/publikasi/policy-papper"
+        },
+        {
+          "name": "laporan",
+          "path": "/publikasi/laporan"
+        }
+      ]
+    }
+  ]
+}
