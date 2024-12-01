@@ -49,10 +49,10 @@ const Header = () => {
                       className=" text-slate-600 group-hover:text-blue-600 group-hover:rotate-180 transition-all duration-300"
                     />
                   </div>
-                  <Card className="absolute w-[200px] -z-10 left-0 top-full hidden group-hover:block border-none shadow transition-opacity duration-300 rounded">
+                  <Card className="absolute w-[300px] -z-10 left-0 top-full hidden group-hover:block border-none shadow transition-opacity duration-300 rounded">
                     {children.map(({ name, path }) => (
                       <Link href={path} key={name}>
-                        <div className="py-3 cursor-pointer hover:bg-primary/15 rounded">
+                        <div className="py-2 cursor-pointer hover:bg-primary/15 rounded">
                           <div className="px-4 py-2">
                             <span>{name}</span>
                           </div>

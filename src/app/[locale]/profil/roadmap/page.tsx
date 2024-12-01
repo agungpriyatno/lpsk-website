@@ -1,64 +1,66 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
+"use client"
 
-const PejabatPage = () => {
-  return (
-    <main className="space-y-10 w-screen">
-      <section className="container">
-        <Breadcrumb className="pt-5">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Beranda</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/profil">Profil</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Roadmap & Rencana Strategis</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </section>
-      <section className="container space-y-10">
-        <h1 className="text-2xl font-bold text-center">
-          ROAD MAP & RENCANA STRATEGIS LEMBAGA PERLINDUNGAN SAKSI DAN KORBAN
-        </h1>
-        <div className="flex flex-col place-items-center gap-2">
-          <div className=" w-full grid grid-cols-4 gap-4">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <div key={index} className="flex flex-col gap-5">
-                <Card className="aspect-[3/4] relative rounded overflow-hidden group">
-                  <Image
-                    src={`https://picsum.photos/seed/report-${
-                      index + 1
-                    }/1000/1000`}
-                    alt=""
-                    fill
-                    className=" object-center group-hover:scale-105 transition-all duration-300"
-                  />
-                </Card>
-                <Button asChild>
-                  <Link href={"/"}>Unduh</Link>
-                </Button>
-              </div>
-            ))}
-          </div>
+
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { AppContainer } from '@/components/ui/app-container';
+import { DownloadCloudIcon, FileIcon } from 'lucide-react';
+import Image from 'next/image';
+
+export default function Page() {
+    return (
+        <div className='flex flex-col gap-10'>
+            <div className=' h-[400px] w-full bg-background'>
+                <div className=' flex w-full h-full justify-center place-items-center relative'>
+                    <div className='h-full w-full absolute bg-slate-800'>
+                        <Image src={'/images/fondasi.png'} fill alt='' sizes='100vh' className=' object-cover opacity-50' />
+                    </div>
+                    <div className=' absolute left-0 top-0 right-0 bottom-0 flex justify-center place-items-center'>
+                        <h1 className=' text-3xl font-bold absolute text-slate-100'>Road Map & Rencana Strategi</h1>
+                    </div>
+                </div>
+            </div>
+            <div className='w-full'>
+                <AppContainer>
+                    <div className=' grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5'>
+                        <Card>
+                            <CardHeader className='flex justify-center place-items-center'>
+                                <FileIcon size={50}/>
+                            </CardHeader>
+                            <CardContent className='text-center'>
+                                <p>Roadmap 2018</p>
+                            </CardContent>
+                            <CardFooter className='flex justify-center place-items-center'>
+                                <Button className='flex gap-2'><DownloadCloudIcon/> Unduh</Button>
+                            </CardFooter>
+                        </Card>
+                        <Card>
+                            <CardHeader  className='flex justify-center place-items-center'>
+                                <FileIcon size={50}/>
+                            </CardHeader>
+                            <CardContent className='text-center'>
+                                <p>Roadmap 2018</p>
+                            </CardContent>
+                            <CardFooter className='flex justify-center place-items-center'>
+                                <Button className='flex gap-2'><DownloadCloudIcon/> Unduh</Button>
+                            </CardFooter>
+                        </Card>
+                        <Card>
+                            <CardHeader  className='flex justify-center place-items-center'>
+                                <FileIcon size={50}/>
+                            </CardHeader>
+                            <CardContent className='text-center'>
+                                <p>Roadmap 2018</p>
+                            </CardContent>
+                            <CardFooter className='flex justify-center place-items-center'>
+                                <Button className='flex gap-2'><DownloadCloudIcon/> Unduh</Button>
+                            </CardFooter>
+                        </Card>
+                    </div>
+                </AppContainer>
+            </div>
+          
+            
         </div>
-      </section>
-    </main>
-  );
-};
-
-export default PejabatPage;
+    )
+}

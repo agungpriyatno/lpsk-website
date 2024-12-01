@@ -11,7 +11,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import localFont from "next/font/local";
 import "../globals.css";
-
+import { Footer } from "@/components/feature/shared/footer";
+import { ReactQueryProvider } from "@/components/provider/react-query";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -38,30 +40,35 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <FilterStoreProvider>
-        <FontStoreProvider>
-          <ToolStoreProvider>
-            <BaseLayout
-              className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-              <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-              >
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                  <ScrollArea className="h-screen relative">
-                    <Header/>
-                    {children}
-                  </ScrollArea>
-                  <Accessbility />
-                </NextIntlClientProvider>
-              </ThemeProvider>
-            </BaseLayout>
-          </ToolStoreProvider>
-        </FontStoreProvider>
-      </FilterStoreProvider>
+      <ReactQueryProvider>
+        <NuqsAdapter>
+          <FilterStoreProvider>
+            <FontStoreProvider>
+              <ToolStoreProvider>
+                <BaseLayout
+                  className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                >
+                  <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                  >
+                    <NextIntlClientProvider locale={locale} messages={messages}>
+                      <ScrollArea className="h-screen relative">
+                        <Header />
+                        {children}
+                        <Footer />
+                      </ScrollArea>
+                      <Accessbility />
+                    </NextIntlClientProvider>
+                  </ThemeProvider>
+                </BaseLayout>
+              </ToolStoreProvider>
+            </FontStoreProvider>
+          </FilterStoreProvider>
+        </NuqsAdapter>
+      </ReactQueryProvider>
     </html>
   );
 }

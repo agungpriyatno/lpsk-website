@@ -2,8 +2,8 @@
 
 import { useMessages } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { Card, CardContent } from "../ui/card";
+import { Link } from "@/lib/i18n/routing";
 
 const InformationSection = () => {
   const { applicationInternal: data } = useMessages();

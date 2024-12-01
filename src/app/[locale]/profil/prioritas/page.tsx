@@ -15,7 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/routing";
 
 const PejabatPage = () => {
   return (

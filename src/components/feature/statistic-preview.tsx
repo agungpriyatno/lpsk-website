@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/i18n/routing";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 
